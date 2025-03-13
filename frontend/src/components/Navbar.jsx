@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolling ? "scrolled" : ""}`}>
       <div className="logo">
-        <img src="/src/assets/logo-transparent-png.png" alt="logo-img" />
+        <img src="/images/logo-transparent-png.png" alt="logo-img" />
       </div>
 
       <ul className="nav-links">
