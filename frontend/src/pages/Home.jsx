@@ -2,6 +2,45 @@ import { Link } from "react-router-dom";
 import "../styles/home.css";
 import gsap from "gsap";
 import { useEffect } from "react";
+const courses = [
+  {
+    title: "Job Ready AI Powered Cohort: Web + DSA + Aptitude",
+    img: "/images/lawyer1.avif", // Update with actual image path
+    language: "HINDI",
+    batchType: "LIVE BATCH",
+    price: "5999",
+    oldPrice: "₹11099",
+    discount: "50% OFF",
+  },
+  {
+    title: "Three.js Domination",
+    img: "/images/course2.png",
+    language: "HINDI",
+    batchType: "ANIMATION",
+    price: "₹2499",
+    oldPrice: "₹3500",
+    discount: "29% OFF",
+  },
+  {
+    title: "Java & DSA Domination",
+    img: "/images/course3.png",
+    language: "HINGLISH",
+    batchType: "IN-DEPTH",
+    price: "₹4999",
+    oldPrice: "₹9999",
+    discount: "50% OFF",
+  },
+  {
+    title: "Aptitude & Reasoning for Campus Placements",
+    img: "/images/course4.png",
+    language: "HINGLISH",
+    batchType: "PLACEMENTS",
+    price: "₹999",
+    oldPrice: "₹1500",
+    discount: "67% OFF",
+  },
+];
+
 
 function Home() {
   useEffect(() => {
@@ -60,28 +99,29 @@ function Home() {
 
       {/* Featured Lawyers */}
       <section className="featured-lawyers">
-        <h2>Top Lawyers</h2>
-        <div className="lawyer-cards">
-          <div className="lawyer-card">
-            <h3>John Doe</h3>
-            <p>Criminal Law | 10+ Years Experience</p>
-            <span>⭐ 4.9</span>
-            <br />
-            <Link to="/lawyer/1" className="btn-primary">
-              View Profile
-            </Link>
+      <div className="lawyer-cards-container">
+      {courses.map((course, index) => (
+        <div className="lawyer-card" key={index}>
+          <div className="card-image">
+            <img src={course.img} alt={course.title} />
+            <div className="tag-batch tag-live">{course.batchType}</div>
           </div>
-
-          <div className="lawyer-card">
-            <h3>Jane Smith</h3>
-            <p>Corporate Law | 8+ Years Experience</p>
-            <span>⭐ 4.8</span>
-            <br />
-            <Link to="/lawyer/2" className="btn-primary">
-              View Profile
+          <div className="card-content">
+            <h3 className="card-title">{course.title}</h3>
+            <div className="card-tags">
+              <div className="tag-language">{course.language}</div>
+            </div>
+            <p className="card-price">
+              ₹{course.price} <span className="card-old-price">{course.oldPrice}</span>
+              <span className="discount-badge">{course.discount}</span>
+            </p>
+            <Link to={`/lawyer/${course.title.replaceAll(" ", "-").toLowerCase()}`} className="view-details-btn">
+              View Details
             </Link>
           </div>
         </div>
+      ))}
+    </div>
       </section>
 
       {/* How It Works Section */}

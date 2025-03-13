@@ -13,6 +13,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+
 /* Fix the navbar at the top */
 .navbar {
   position: fixed;
@@ -39,6 +40,7 @@ body {
 }
 
 body {
+  
   background: var(--primary-bg);
   color: var(--text-color);
   font-family: 'Poppins', sans-serif;
