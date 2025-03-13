@@ -28,13 +28,14 @@
   }
 
   .logo img{
-    width: 300px;
+    width: 200px;
     height: auto;
     
   }
   
   /* 🏠 Logo */
   .logo a {
+   
     margin-left: 10px;
     font-family: 'Neumachina';
     text-decoration: none;
@@ -92,6 +93,7 @@
   }
 
   .nav-links .btn-primary {
+    margin-top: -7px;
     background: #19DABD;
     padding: 8px 15px;
     border-radius: 8px;
