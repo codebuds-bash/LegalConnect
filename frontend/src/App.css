@@ -1,0 +1,79 @@
+/* Reset all default margins, paddings, and box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body takes full width and prevents horizontal scrolling */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Fix the navbar at the top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Prevent content from overlapping the navbar */
+.page-content {
+  margin-top: 80px; /* Adjust this based on the navbar height */
+  padding: 20px;
+}
+
+/* 🌙 Dark Theme */
+:root {
+  --primary-bg: #0d0d0d;  /* Deep black */
+  --secondary-bg: #181818; /* Slightly lighter black */
+  --text-color: #ffffff;   /* White text */
+  --glass-bg: rgba(255, 255, 255, 0.1); /* Transparent glass effect */
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --highlight-color: #00d4ff; /* Neon blue */
+}
+
+body {
+  background: var(--primary-bg);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glassmorphic Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background: transparent; /* Initially transparent */
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* Neon Hover Effect */
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--highlight-color);
+}
+
+/* Page Content with Some Spacing */
+.page-content {
+  margin-top: 80px;
+  padding: 20px;
+}

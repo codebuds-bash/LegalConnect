@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Neumachina';
+    src: url('/src/fonts/NeueMachina-Regular.woff2') format('woff2'),
+         url('/src/fonts/NeueMachina-Regular.woff') format('woff');
+    font-weight: 300;
+  }
+/* 🌙 Default Navbar (Transparent at the top) */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    transition: all 0.3s ease-in-out;
+    background: transparent; /* Fully transparent initially */
+  }
+  
+  /* 📜 Glassmorphic Effect When Scrolled */
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    backdrop-filter: blur(10px);  /* Glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo img{
+    width: 300px;
+    height: auto;
+    
+  }
+  
+  /* 🏠 Logo */
+  .logo a {
+    margin-left: 10px;
+    font-family: 'Neumachina';
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* White text */
+  }
+  
+  /* 🔗 Navigation Links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links a {
+    font-family: 'Neumachina';
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .nav-links a:hover {
+    transform: scale(1.1);
+  }
+  
+  /* 📱 Mobile Menu (for small screens) */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s;
+  }
+  
+
+  .btn-primary {
+    
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  .btn-primary a{
+    color: black;
+  }
+
+  .nav-links .btn-primary {
+    background: #19DABD;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: normal;
+    color: black !important; /* Make text black */
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+  
+  
+  /* 📱 Responsive Navbar for Mobile */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px 0;
+      display: none;
+      backdrop-filter: blur(10px);
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  

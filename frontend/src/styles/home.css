@@ -1,0 +1,195 @@
+/* 🌙 Dark Theme */
+:root {
+  --primary-bg: #0d0d0d;  /* Deep Black */
+  --secondary-bg: #181818; /* Slightly lighter black */
+  --text-color: #ffffff;   /* White text */
+  --glass-bg: rgba(255, 255, 255, 0.1); /* Transparent glass effect */
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --highlight-color: #00d4ff; /* Neon Blue */
+  --shadow: rgba(0, 212, 255, 0.3);
+}
+@font-face {
+  font-family: 'Neumachina';
+  src: url('/src/fonts/NeueMachina-Regular.woff2') format('woff2'),
+       url('/src/fonts/NeueMachina-Regular.woff') format('woff');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Helvatica';
+  src: url('/src/fonts/Helvetica.woff') format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Juana Regular";
+  src: url("https://db.onlinewebfonts.com/t/5ce9655f6b33e1aaa1c62de0397a79dc.eot");
+  src: url("https://db.onlinewebfonts.com/t/5ce9655f6b33e1aaa1c62de0397a79dc.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/5ce9655f6b33e1aaa1c62de0397a79dc.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/5ce9655f6b33e1aaa1c62de0397a79dc.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/5ce9655f6b33e1aaa1c62de0397a79dc.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/5ce9655f6b33e1aaa1c62de0397a79dc.svg#Juana Regular")format("svg");
+}
+
+
+.home-container {
+  background: var(--primary-bg);
+  color: var(--text-color);
+  padding: 100px 5%;  /* Ensure top margin */
+}
+
+/* 🎯 Hero Section */
+.hero {
+  margin-top: 500px;
+  text-align: center;
+  padding: 100px 20px;
+
+  color: white;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-family: "Neumachina";
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.hero span {
+  font-family: "Juana Regular";
+  color: #19dabd;
+}
+
+.highlight {
+  color: #19dabd;
+}
+
+.hero button {
+  font-family: 'Helvatica';
+  background-color: #19dabd;
+  color: black;
+  padding: 15px 30px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 60px;
+}
+.side-text{
+  font-size: 0.95em;
+    width: 14em;
+    text-align: left;
+    font-weight: 300;
+    line-height: 1.2em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(-60%, -100%);
+}
+
+/* 🔍 Search Section */
+.search-section {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-section input {
+  padding: 12px;
+  width: 300px;
+  background: var(--secondary-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+  border-radius: 6px;
+  outline: none;
+}
+
+.search-section button {
+  padding: 12px 20px;
+  background: var(--highlight-color);
+  border: none;
+  color: var(--primary-bg);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.search-section button:hover {
+  background: #00a3cc;
+}
+
+/* 👨‍⚖️ Featured Lawyers */
+.featured-lawyers {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.lawyer-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.lawyer-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  max-width: 250px;
+  box-shadow: 0px 4px 15px var(--shadow);
+  transition: transform 0.3s ease-in-out;
+}
+
+.lawyer-card:hover {
+  transform: scale(1.05);
+}
+
+.lawyer-card h3 {
+  font-size: 1.4rem;
+}
+
+.lawyer-card p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.lawyer-card span {
+  margin-top: 30px;
+  display: block;
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: #ffc107;
+}
+
+/* 🛠️ How It Works */
+.how-it-works {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.step {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  max-width: 250px;
+  box-shadow: 0px 4px 15px var(--shadow);
+}
+
+.step h3 {
+  font-size: 1.3rem;
+}
+
+.step p {
+  font-size: 1rem;
+  opacity: 0.8;
+}

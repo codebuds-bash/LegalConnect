@@ -1,0 +1,71 @@
+/* Set the background color */
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  /* Style the authentication container */
+  .auth-container {
+    max-width: 400px;
+    width: 90%;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Add better styling for form elements */
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .auth-btn {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .auth-btn:hover {
+    background: #0056b3;
+  }
+  
+  p {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  p a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
